@@ -1,0 +1,51 @@
+name: VxCloud Landing CI
+
+on:
+  push:
+    branches:
+      - feature/vxcloud-landing-v3
+      - vxcloud-landing-v3
+  pull_request:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  validate:
+    name: Validate HTML/CSS and prepare artifact
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ensure landing assets exist and are linked
+        run: |
+          test -f index.html
+          test -f styles.css
+          grep -qi 'href="styles.css"' index.html
+
+      - name: HTML validation
+        run: npx -y html-validate@9.1.4 index.html
+
+      - name: Basic CSS lint (non-blocking)
+        run: npx -y stylelint@16.9.0 "**/*.css" || true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: validate
+    if: github.ref == 'refs/heads/feature/vxcloud-landing-v3' || github.ref == 'refs/heads/vxcloud-landing-v3'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
