@@ -1,195 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VxCloud — Multi‑Cloud DevOps & AI Platform</title>
-  <meta name="description" content="VxCloud is a unified multi‑cloud DevOps & AI platform that standardizes CI/CD, policy‑as‑code, security, and FinOps across AWS, Azure, GCP, and on‑prem. Ship faster with guardrails, insights, and AI copilots — all in one control plane." />
-  <meta name="theme-color" content="#0b1020" />
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <meta name="description" content="VxCloud — The fastest way to build, deploy, and scale modern apps with zero-ops serverless infrastructure." />
+  <title>VxCloud — Build, Ship, Scale</title>
   <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header" role="banner">
-    <nav class="nav container" aria-label="Primary">
-      <div class="brand">
-        <span class="logo" aria-hidden="true">▦</span>
+  <header class="nav">
+    <div class="container nav-row">
+      <a href="#" class="brand" aria-label="VxCloud Home">
+        <span class="brand-mark" aria-hidden="true">⌁</span>
         <span class="brand-name">VxCloud</span>
-      </div>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation">
-        <span class="bar" aria-hidden="true"></span>
-        <span class="bar" aria-hidden="true"></span>
-        <span class="bar" aria-hidden="true"></span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </button>
-      <ul id="nav-list" class="nav-list">
-        <li><a href="#product">Product</a></li>
-        <li><a href="#features">Platform</a></li>
-        <li><a href="#stats">Impact</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-cta">
-        <a class="btn ghost" href="#contact">Sign in</a>
-        <a class="btn primary" href="#get-started">Get started</a>
-      </div>
-    </nav>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-solid" href="#get-started">Start Free</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="main">
-    <section id="product" class="hero">
+  <main>
+    <section class="hero">
       <div class="container hero-inner">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            One control plane for multi‑cloud DevOps & AI
-          </h1>
-          <p class="hero-subtitle">
-            VxCloud unifies CI/CD, environment orchestration, policy‑as‑code, security, and FinOps across AWS, Azure, GCP, and on‑prem. Standardize delivery, cut cloud waste, and resolve incidents faster with AI copilots built into your workflows.
+        <div class="hero-copy">
+          <h1>Ship faster on VxCloud</h1>
+          <p class="lede">
+            The zero‑ops cloud for modern apps. Develop locally, deploy globally,
+            and scale to millions—without managing servers, patches, or pipelines.
           </p>
-          <div class="hero-cta">
-            <a id="get-started" class="btn primary large" href="#contact">Start free</a>
-            <a class="btn secondary large" href="#contact">Book a demo</a>
+          <div class="cta-row">
+            <a class="btn btn-solid" href="#get-started">Start Free</a>
+            <a class="btn btn-ghost" href="mailto:sales@vxcloud.com">Contact Sales</a>
           </div>
-          <ul class="hero-trust" aria-label="Trusted benefits">
-            <li>Enterprise‑grade guardrails</li>
-            <li>Policy‑driven automation</li>
-            <li>Cloud savings up to 35%</li>
-          </ul>
+          <div class="trust">
+            <span class="dot"></span>
+            <span>99.99% uptime SLA • Global edge • Built‑in observability</span>
+          </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="orb orb-a"></div>
-          <div class="orb orb-b"></div>
-          <div class="grid-panel">
-            <div class="chip">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14l4-4h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"></path></svg>
-              Unified pipelines
+        <div class="hero-card" role="img" aria-label="VxCloud deployment preview">
+          <div class="hud">
+            <div class="hud-row">
+              <span class="pill success">deployed</span>
+              <span class="mono">api.vxcloud.app</span>
             </div>
-            <div class="chip">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l3 5.2 5.9.9-4.3 4.2 1 5.9L12 15.9 6.4 18.2l1-5.9L3 7.1l5.9-.9L12 1z"></path></svg>
-              Policy‑as‑code
+            <div class="hud-row">
+              <span class="pill info">build</span>
+              <span class="mono">14.2s • cache hit</span>
             </div>
-            <div class="chip">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h18v4H3zM3 10h10v4H3zM3 17h14v4H3z"></path></svg>
-              FinOps insights
+            <div class="hud-row">
+              <span class="pill warn">latency</span>
+              <span class="mono">38 ms (p95)</span>
             </div>
+          </div>
+          <div class="graph">
+            <svg viewBox="0 0 320 120" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="grad" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(110,231,255,0.9)" />
+                  <stop offset="100%" stop-color="rgba(110,231,255,0.05)" />
+                </linearGradient>
+              </defs>
+              <path d="M0,80 C40,70 60,60 100,70 C140,80 160,40 200,48 C240,56 260,30 320,44 V120 H0 Z" fill="url(#grad)"></path>
+              <path d="M0,80 C40,70 60,60 100,70 C140,80 160,40 200,48 C240,56 260,30 320,44" stroke="#6ee7ff" stroke-width="2" fill="none"></path>
+            </svg>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="features" class="features container" aria-label="Platform features">
-      <header class="section-head">
-        <h2>Build once. Ship anywhere.</h2>
-        <p>Standardize delivery and operations across every cloud with a single, policy‑driven platform.</p>
-      </header>
-
-      <div class="features-grid">
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Unified CI/CD & environments</h3>
-          <p>Blueprint pipelines, ephemeral environments, and progressive delivery with zero drift. Templates keep teams consistent across AWS, Azure, GCP, and on‑prem.</p>
-          <ul class="feature-points">
-            <li>GitOps‑ready workflows</li>
-            <li>Ephemeral & preview envs</li>
-            <li>Canary & blue/green deploys</li>
-          </ul>
-        </article>
-
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Policy‑as‑code security</h3>
-          <p>Bake compliance into delivery with Open Policy Agent rules for access, secrets, and change windows. Fail fast with human‑readable guardrails and audit trails.</p>
-          <ul class="feature-points">
-            <li>OPA & SLSA policies</li>
-            <li>Signed artifacts & SBOM</li>
-            <li>End‑to‑end auditability</li>
-          </ul>
-        </article>
-
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 16s3-4 8-4 8 4 8 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
-          </div>
-          <h3>FinOps guardrails & AI copilots</h3>
-          <p>Right‑size infra with budget policies, automated schedules, and AI recommendations. Detect waste in real‑time and enforce spend per team or service.</p>
-          <ul class="feature-points">
-            <li>Real‑time cost visibility</li>
-            <li>Automated cleanup & TTLs</li>
-            <li>AI change & incident assist</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="stats" class="stats" aria-label="Impact metrics">
-      <div class="container stats-band">
-        <div class="stat">
-          <div class="stat-value">50%</div>
-          <div class="stat-label">Faster release cycles</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">35%</div>
-          <div class="stat-label">Cloud cost savings</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">99.95%</div>
-          <div class="stat-label">Pipeline uptime</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">10k+</div>
-          <div class="stat-label">Builds per day</div>
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Everything you need to build, deploy, and scale</h2>
+        <p class="section-lede">
+          VxCloud unifies compute, data, and delivery with a developer‑first workflow.
+        </p>
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 7h16M4 12h16M4 17h10" stroke="#6ee7ff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Zero‑config deploys</h3>
+            <p>Push to main and we’ll build, optimize, and ship globally. No YAML sprawl or servers to babysit.</p>
+            <ul class="bullets">
+              <li>Auto builds & rollbacks</li>
+              <li>Branch previews</li>
+              <li>Pragmatic defaults</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" stroke="#6ee7ff" stroke-width="2"/>
+                <path d="M12 7v10M7 12h10" stroke="#6ee7ff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Autoscale to zero</h3>
+            <p>Serverless compute that scales per‑request, with cold‑start elimination and smart connection pooling.</p>
+            <ul class="bullets">
+              <li>Edge + regions</li>
+              <li>Runtime isolation</li>
+              <li>Usage‑based billing</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 12l4 4 8-8" stroke="#6ee7ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Built‑in observability</h3>
+            <p>Metrics, logs, and traces in one place. Find issues fast with full request context and distributed traces.</p>
+            <ul class="bullets">
+              <li>Real‑time dashboards</li>
+              <li>p95 latency alerts</li>
+              <li>One‑click rollbacks</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="cta container" aria-label="Get in touch">
-      <div class="cta-card">
-        <h2>See VxCloud in action</h2>
-        <p>Start free in minutes or book a guided demo with our engineers. We’ll map your current setup and show how VxCloud standardizes delivery across clouds with built‑in guardrails.</p>
-        <div class="cta-actions">
-          <a class="btn primary large" href="mailto:hello@vxcloud.com?subject=VxCloud%20Demo%20Request">Request a demo</a>
-          <a class="btn ghost large" href="#get-started">Start free</a>
+    <section id="pricing" class="stripe">
+      <div class="container stripe-inner">
+        <div class="stripe-copy">
+          <h3>Simple, scalable pricing</h3>
+          <p>Start free, then pay for what you use. No surprises.</p>
+        </div>
+        <a class="btn btn-outline" href="#get-started">View Plans</a>
+      </div>
+    </section>
+
+    <section id="docs" class="cta-band">
+      <div class="container">
+        <h2>Docs that don’t fight you</h2>
+        <p class="section-lede">Practical guides, copy‑paste snippets, and examples for every framework.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="#get-started">Get Started</a>
+          <a class="btn btn-ghost" href="#contact">Ask an expert</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="logo" aria-hidden="true">▦</span>
-        <span class="brand-name">VxCloud</span>
-        <p class="footer-tag">Multi‑cloud DevOps & AI platform</p>
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div class="foot-col">
+        <div class="brand foot-brand">
+          <span class="brand-mark" aria-hidden="true">⌁</span>
+          <span class="brand-name">VxCloud</span>
+        </div>
+        <p class="muted">Build, ship, and scale with confidence.</p>
       </div>
-      <nav aria-label="Footer">
-        <ul class="footer-links">
-          <li><a href="#" aria-label="Read the documentation">Docs</a></li>
-          <li><a href="#" aria-label="Security information">Security</a></li>
-          <li><a href="#" aria-label="Status page">Status</a></li>
-          <li><a href="#" aria-label="Privacy policy">Privacy</a></li>
-          <li><a href="#" aria-label="Terms of service">Terms</a></li>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#docs">Docs</a></li>
         </ul>
-      </nav>
-      <p class="legal">© <span id="year"></span> VxCloud, Inc. All rights reserved.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="mailto:sales@vxcloud.com">Sales</a></li>
+          <li><a href="mailto:support@vxcloud.com">Support</a></li>
+          <li><a href="#">Status</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:hello@vxcloud.com">hello@vxcloud.com</a></li>
+          <li><a href="https://vxcloud.com" rel="noopener">vxcloud.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container foot-bottom">
+      <small class="muted">© <span id="year"></span> VxCloud, Inc. All rights reserved.</small>
     </div>
   </footer>
 
   <script>
-    // Small progressive enhancement: mobile nav toggle + current year (no external deps)
+    // Mobile nav toggle
     (function () {
       var btn = document.querySelector('.nav-toggle');
-      var list = document.getElementById('nav-list');
-      if (btn && list) {
-        btn.addEventListener('click', function () {
-          var expanded = this.getAttribute('aria-expanded') === 'true';
-          this.setAttribute('aria-expanded', String(!expanded));
-          list.classList.toggle('open');
-        });
-      }
+      var links = document.querySelector('.nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+      });
+    })();
+    // Current year
+    (function () {
       var y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
     })();
