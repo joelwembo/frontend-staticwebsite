@@ -1,16 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VA Studio — ERP</title>
-    <meta name="description" content="VA Studio ERP — Production-ready React template." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>VxCloud — Multi‑Cloud DevOps & AI Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="VxCloud unifies DevOps across AWS, Azure, GCP and on‑prem with GitOps automation, policy‑as‑code, and AI co‑pilots for delivery, operations, and security."
+    />
+    <meta name="theme-color" content="#0b1020" />
+    <meta property="og:title" content="VxCloud — Multi‑Cloud DevOps & AI Platform" />
+    <meta
+      property="og:description"
+      content="Build, ship, and scale across every cloud. VxCloud brings a single control plane for Kubernetes, serverless, and VMs with AI‑assisted workflows."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>  <script src="/__va_visual_edit_bridge.js"></script>
-</body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <nav class="nav container" aria-label="Primary">
+        <a href="#" class="brand" aria-label="VxCloud home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M12 2l9 5.2v9.6L12 22l-9-5.2V7.2L12 2zm0 2.3L5 7.3v9.4l7 4 7-4V7.3l-7-3z" />
+            </svg>
+          </span>
+          <span class="brand-name">VxCloud</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#features">Solutions</a></li>
+          <li><a href="#docs" aria-disabled="true" tabindex="-1" class="muted">Docs</a></li>
+          <li><a href="#pricing" aria-disabled="true" tabindex="-1" class="muted">Pricing</a></li>
+        </ul>
+
+        <div class="nav-ctas">
+          <a class="btn ghost" href="#contact" data-cta="book-demo">Book a demo</a>
+          <a class="btn primary" href="#get-started" data-cta="get-started">Get started</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="site-main" role="main">
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Build, ship, and scale across every cloud — with AI for DevOps.
+            </h1>
+            <p class="hero-subtitle">
+              VxCloud is the multi‑cloud DevOps & AI platform that unifies Kubernetes, serverless,
+              and VM workflows across AWS, Azure, GCP, and on‑prem. Ship 10× faster with GitOps automation,
+              policy‑as‑code, and AI‑assisted runbooks that keep you compliant and production‑ready.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#get-started" data-cta="hero-get-started">Get started free</a>
+              <a class="btn secondary" href="#contact" data-cta="hero-book-demo">Book a demo</a>
+            </div>
+            <ul class="hero-points" aria-label="Key advantages">
+              <li>Single control plane for multi‑cloud delivery</li>
+              <li>Secure by default with policy guardrails</li>
+              <li>AI co‑pilots for CI/CD, ops, and compliance</li>
+            </ul>
+          </div>
+          <div class="hero-visual" role="img" aria-label="Unified multi-cloud control">
+            <div class="orb orb-a"></div>
+            <div class="orb orb-b"></div>
+            <div class="mesh"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Platform summary anchor -->
+      <section id="platform" class="platform container">
+        <h2 class="section-title">One platform. Every cloud. Zero friction.</h2>
+        <p class="section-lead">
+          Standardize pipelines, deployments, and operations with a single declarative model.
+          Bring your own cloud — VxCloud brings the governance, visibility, and speed.
+        </p>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="features container" aria-labelledby="features-title">
+        <h2 id="features-title" class="section-title">What you can do with VxCloud</h2>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M12 2l9 4v6c0 5.52-4.48 10-10 10S1 17.52 1 12V6l11-4zM3 7v5c0 4.42 3.58 8 8 8s8-3.58 8-8V7l-8-3-8 3z"/>
+              </svg>
+            </div>
+            <h3>Multi‑Cloud Control Plane</h3>
+            <p>
+              Operate Kubernetes, serverless, and VMs from a unified API and UI.
+              Consistent releases, traffic policies, and observability across AWS, Azure, GCP, and on‑prem.
+            </p>
+            <ul class="list">
+              <li>Environment blueprints</li>
+              <li>Traffic & rollout controls</li>
+              <li>Centralized observability</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M4 4h16v4H4V4zm0 6h10v10H4V10zm12 0h4v10h-4V10z"/>
+              </svg>
+            </div>
+            <h3>GitOps + Policy‑as‑Code</h3>
+            <p>
+              Automate delivery with pull‑request workflows and immutable releases.
+              Enforce org standards with policy‑as‑code and pre‑flight checks before anything lands in prod.
+            </p>
+            <ul class="list">
+              <li>Signed artifacts & SBOMs</li>
+              <li>OPA/Rego guardrails</li>
+              <li>Drift detection & auto‑reconcile</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M12 3a9 9 0 100 18 9 9 0 000-18zm1 5v4l3 2-.9 1.45L11 13V8h2z"/>
+              </svg>
+            </div>
+            <h3>AI Ops & Guardrails</h3>
+            <p>
+              Accelerate incident response with AI‑assisted runbooks, context‑aware remediation,
+              and natural‑language queries over logs, metrics, and traces — with auditable actions.
+            </p>
+            <ul class="list">
+              <li>Proactive anomaly detection</li>
+              <li>Root‑cause suggestions</li>
+              <li>Auto‑generated postmortems</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section id="stats" class="stats" aria-label="Impact statistics">
+        <div class="container stats-inner">
+          <div class="stat">
+            <div class="stat-number">45%</div>
+            <div class="stat-label">faster lead time</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">60%</div>
+            <div class="stat-label">fewer incidents</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">99.99%</div>
+            <div class="stat-label">uptime SLO ready</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">3×</div>
+            <div class="stat-label">faster rollbacks</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Placeholder anchors for nav -->
+      <section id="docs" class="container sr-only" aria-hidden="true"></section>
+      <section id="pricing" class="container sr-only" aria-hidden="true"></section>
+      <section id="get-started" class="container">
+        <div class="cta-panel">
+          <h2>Start building with VxCloud</h2>
+          <p>Connect your cloud accounts and deploy your first service in minutes.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Talk to an expert</a>
+            <a class="btn ghost" href="#contact">See a guided demo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer" role="contentinfo">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 2l9 5.2v9.6L12 22l-9-5.2V7.2L12 2zm0 2.3L5 7.3v9.4l7 4 7-4V7.3l-7-3z" />
+              </svg>
+            </span>
+            <span class="brand-name">VxCloud</span>
+          </a>
+          <p class="muted small">
+            The multi‑cloud DevOps & AI platform for modern software teams.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="small muted">Company</h3>
+          <ul>
+            <li><a href="#features">Solutions</a></li>
+            <li><a href="#platform">Platform</a></li>
+            <li><a href="#stats">Impact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="small muted">Get in touch</h3>
+          <ul>
+            <li><a href="mailto:sales@vxcloud.com">sales@vxcloud.com</a></li>
+            <li><a href="mailto:support@vxcloud.com">support@vxcloud.com</a></li>
+          </ul>
+          <div class="footer-cta">
+            <a class="btn secondary" href="#contact" data-cta="footer-book-demo">Book a demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p class="small muted">© <span id="y"></span> VxCloud, Inc. All rights reserved.</p>
+        <ul class="legal small">
+          <li><a href="#" aria-disabled="true" tabindex="-1">Privacy</a></li>
+          <li><a href="#" aria-disabled="true" tabindex="-1">Terms</a></li>
+          <li><a href="#" aria-disabled="true" tabindex="-1">Security</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      // Update year without external JS; no frameworks, minimal footprint.
+      (function () {
+        var y = document.getElementById('y');
+        if (y) y.textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
 </html>
