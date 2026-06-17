@@ -10,31 +10,45 @@ terraform {
 }
 
 provider "aws" {
-  region = var.region
+  region = var.aws_region
 }
 
-variable "region" {
-  description = "AWS region for the S3 bucket."
+# ------------------------------
+# Variables
+# ------------------------------
+variable "bucket_name" {
+  description = "Globally-unique name for the S3 bucket that will host the static website."
+  type        = string
+}
+
+variable "aws_region" {
+  description = "AWS region to deploy resources into."
   type        = string
   default     = "us-east-1"
 }
 
-variable "bucket_name" {
-  description = "Globally-unique S3 bucket name to host the VxCloud landing page."
-  type        = string
-}
-
+# ------------------------------
+# S3 Static Website Bucket
+# ------------------------------
 resource "aws_s3_bucket" "site" {
-  bucket        = var.bucket_name
-  force_destroy = true
+  bucket = var.bucket_name
 
   tags = {
-    Project = "VxCloud Landing"
-    Managed = "Terraform"
+    Project = "VxCloud Landing Page"
   }
 }
 
-# Enable static website hosting and set index document
+# Public access block must allow public reads for website hosting
+resource "aws_s3_bucket_public_access_block" "site" {
+  bucket = aws_s3_bucket.site.id
+
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
+}
+
+# Enable website hosting configuration
 resource "aws_s3_bucket_website_configuration" "site" {
   bucket = aws_s3_bucket.site.id
 
@@ -42,13 +56,12 @@ resource "aws_s3_bucket_website_configuration" "site" {
     suffix = "index.html"
   }
 
-  # For simple static sites, serve index.html for errors as well
   error_document {
     key = "index.html"
   }
 }
 
-# Allow public reads of objects (required for static website hosting)
+# Bucket policy for public read access (GET only)
 data "aws_iam_policy_document" "public_read" {
   statement {
     sid     = "PublicReadGetObject"
@@ -64,23 +77,32 @@ data "aws_iam_policy_document" "public_read" {
   }
 }
 
-resource "aws_s3_bucket_public_access_block" "site" {
-  bucket = aws_s3_bucket.site.id
-
-  block_public_acls       = false
-  block_public_policy     = false
-  ignore_public_acls      = false
-  restrict_public_buckets = false
-}
-
-resource "aws_s3_bucket_policy" "site" {
+resource "aws_s3_bucket_policy" "public_read" {
   bucket = aws_s3_bucket.site.id
   policy = data.aws_iam_policy_document.public_read.json
+}
 
-  depends_on = [aws_s3_bucket_public_access_block.site]
+# Optional: CORS (allow GET for assets like fonts)
+resource "aws_s3_bucket_cors_configuration" "site" {
+  bucket = aws_s3_bucket.site.id
+
+  cors_rule {
+    allowed_headers = ["*"]
+    allowed_methods = ["GET", "HEAD"]
+    allowed_origins = ["*"]
+    max_age_seconds = 3000
+  }
+}
+
+# ------------------------------
+# Outputs
+# ------------------------------
+output "bucket_name" {
+  description = "Name of the S3 bucket used for hosting."
+  value       = aws_s3_bucket.site.bucket
 }
 
 output "website_endpoint" {
-  description = "S3 static website endpoint URL"
+  description = "The S3 static website endpoint URL."
   value       = aws_s3_bucket_website_configuration.site.website_endpoint
 }
